@@ -97,6 +97,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -124,6 +127,12 @@ body {
   color: #777; }
   .button--white::after {
     background-color: #fff; }
+
+.button--red {
+  background-color: #a70000;
+  color: #fff; }
+  .button--red::after {
+    background-color: #a70000; }
 
 .button::after {
   content: '';
@@ -205,6 +214,87 @@ body {
     transform: translateY(-1.5rem) scale(1.03);
     cursor: pointer; }
 
+.popular-card {
+  perspective: 150rem;
+  height: 50rem;
+  position: relative; }
+  .popular-card__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .popular-card__side--front {
+      background-color: white; }
+    .popular-card__side--back {
+      transform: rotateY(180deg); }
+      .popular-card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #09c6f9, #045de9); }
+      .popular-card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #ff5252, #a70000); }
+      .popular-card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #ffdd00, #ff9d00); }
+  .popular-card:hover .popular-card__side--front {
+    transform: rotateY(-180deg); }
+  .popular-card:hover .popular-card__side--back {
+    transform: rotateY(0); }
+  .popular-card__image {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 49% 100%, 0 80%); }
+    .popular-card__image--1 {
+      background-image: linear-gradient(to right bottom, #09c6f9, #045de9), url(../img/card-1.jpg); }
+    .popular-card__image--2 {
+      background-image: linear-gradient(to right bottom, #ff5252, #a70000), url(../img/cards-2.jpg); }
+    .popular-card__image--3 {
+      background-image: linear-gradient(to right bottom, #ffdd00, #fbb034), url(../img/features-bg.jpg); }
+  .popular-card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 17rem;
+    right: 2rem; }
+  .popular-card__heading-span--1 {
+    background-image: linear-gradient(to right bottom, rgba(9, 198, 249, 0.85), rgba(4, 93, 233, 0.85)); }
+  .popular-card__heading-span--2 {
+    background-image: linear-gradient(to right bottom, rgba(255, 82, 82, 0.85), rgba(167, 0, 0, 0.85)); }
+  .popular-card__heading-span--3 {
+    background-image: linear-gradient(to right bottom, rgba(255, 221, 0, 0.85), rgba(251, 176, 52, 0.85)); }
+  .popular-card__details {
+    padding: 3rem; }
+    .popular-card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+    .popular-card__details li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .popular-card__details li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+  .popular-card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .popular-card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .popular-card__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .popular-card__price-value {
+    font-size: 3rem;
+    font-weight: 200; }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(255, 69, 0, 0.7), rgba(167, 0, 0, 0.7)), url("../img/header-bg.jpeg");
   background-size: cover;
@@ -266,3 +356,8 @@ body {
   transform: skewY(-7deg); }
   .section-feature > * {
     transform: skewY(7deg); }
+
+.popular-cars {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem; }
