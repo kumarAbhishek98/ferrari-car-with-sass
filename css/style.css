@@ -100,6 +100,19 @@ body {
 .u-margin-top-big {
   margin-top: 8rem; }
 
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5; }
+  .background-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -295,6 +308,87 @@ body {
     font-size: 3rem;
     font-weight: 200; }
 
+.customers {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6rem;
+  padding-left: 9rem;
+  border-radius: 3px;
+  transform: skewX(-12deg); }
+  .customers__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .customers__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  .customers__text {
+    transform: skewX(12deg); }
+  .customers__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .customers:hover .customers__name {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .customers:hover .customers__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.6); }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid #045de9; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #a70000; }
+  .form__input::-webkit-input-placeholder {
+    color: #777; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(255, 69, 0, 0.7), rgba(167, 0, 0, 0.7)), url("../img/header-bg.jpeg");
   background-size: cover;
@@ -342,6 +436,42 @@ body {
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
+.footer {
+  background-color: #333;
+  padding: 4rem 0;
+  font-size: 1.4rem;
+  color: #fff; }
+  .footer__logo-div {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 10rem;
+    height: auto; }
+  .footer__nav {
+    border-top: 1px solid #ff5252;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block; }
+  .footer__link:hover, .footer__link:active {
+    color: #ff5252;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .footer__detail {
+    border-top: 1px solid #ff5252;
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 20rem 0;
@@ -361,3 +491,21 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+
+.testimonials {
+  padding: 12rem 0;
+  position: relative; }
+
+.contact-us {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
+
+.contact {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/p1.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem; }
+  .contact__form {
+    width: 50%;
+    padding: 6rem; }

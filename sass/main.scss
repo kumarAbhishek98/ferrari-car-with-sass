@@ -10,14 +10,18 @@
 @import 'base/utilities';
 
 //Components Import
+@import 'components/video';
 @import 'components/button';
 @import 'components/images';
 @import 'components/feature-box';
 @import 'components/popular';
+@import 'components/testimonials';
+@import 'components/form';
 
 //Layout Import
 @import 'layout/header';
 @import 'layout/grid';
+@import 'layout/footer';
 
 //Pages Import
 @import 'pages/home';
